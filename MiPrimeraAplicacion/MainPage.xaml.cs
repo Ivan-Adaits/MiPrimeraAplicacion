@@ -41,7 +41,7 @@ namespace MiPrimeraAplicacion
 
         private async void OnFetchRandomPokemonClicked(object sender, EventArgs e)
         {
-            int randomId = _random.Next(1, 500);
+            int randomId = _random.Next(1, 500); // Selecciona un Pokémon aleatorio entre 1 y 500
             string apiUrl = $"https://pokeapi.co/api/v2/pokemon/{randomId}";
 
             try
@@ -70,15 +70,14 @@ namespace MiPrimeraAplicacion
                 CornerRadius = 10,
                 Padding = 10,
                 Margin = 5,
-                BackgroundColor = Colors.LightYellow,
                 Content = new VerticalStackLayout
                 {
                     Children =
                     {
-                        new Label { Text = $"Name: {pokemonData.Name}", FontSize = 18, FontAttributes = FontAttributes.Bold, TextColor = Colors.DarkBlue },
-                        new Label { Text = $"Weight: {pokemonData.Weight}", FontSize = 14 },
-                        new Label { Text = $"Height: {pokemonData.Height}", FontSize = 14 },
-                        new Image { Source = pokemonData.Sprites.FrontDefault, HeightRequest = 100, WidthRequest = 100, HorizontalOptions = LayoutOptions.Center }
+                        new Label { Text = $"Name: {pokemonData.Name}", FontSize = 18, FontAttributes = FontAttributes.Bold },
+                        new Label { Text = $"Weight: {pokemonData.Weight}" },
+                        new Label { Text = $"Height: {pokemonData.Height}" },
+                        new Image { Source = pokemonData.Sprites.FrontDefault, HeightRequest = 100, WidthRequest = 100 }
                     }
                 }
             };
