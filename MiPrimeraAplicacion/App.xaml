@@ -9,6 +9,41 @@
                 <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
                 <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+            <!-- Estilo personalizado para los botones -->
+            <Style x:Key="CustomButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="DarkBlue" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10,5" />
+                <Setter Property="Margin" Value="10,5" />
+                <Setter Property="Shadow">
+                    <Shadow Brush="Black" Opacity="0.3" Offset="3,3" />
+                </Setter>
+            </Style>
+
+            <!-- Estilo para las tarjetas de Pokémon -->
+            <Style x:Key="PokemonCardStyle" TargetType="Frame">
+                <Setter Property="BorderColor" Value="Gray" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="BackgroundColor" Value="LightYellow" />
+            </Style>
+
+            <!-- Estilo para etiquetas principales -->
+            <Style x:Key="PokemonTitleLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="TextColor" Value="DarkBlue" />
+            </Style>
+
+            <!-- Estilo para etiquetas secundarias -->
+            <Style x:Key="PokemonInfoLabelStyle" TargetType="Label">
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+
         </ResourceDictionary>
     </Application.Resources>
 </Application>
