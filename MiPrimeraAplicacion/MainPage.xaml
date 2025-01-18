@@ -1,35 +1,36 @@
 ﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MiPrimeraAplicacion.MainPage">
+             x:Class="MiPrimeraAplicacion.MainPage"
+             BackgroundImageSource="pokemon.png">
 
-    <VerticalStackLayout Padding="20">
-        <Label Text="Pokémon Info" 
-               FontSize="24"
-               HorizontalOptions="Center" />
+    <ScrollView>
+        <VerticalStackLayout Padding="20">
 
-        <!-- Botón para obtener Pokémon -->
-        <Button x:Name="FetchPokemonButton"
-                Text="Fetch Pokémon Data"
-                Clicked="OnFetchPokemonClicked"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand" />
+            <Label Text="Pokémon Info" 
+                   FontSize="26"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="White" />
 
-        <!-- Botón para limpiar la lista -->
-        <Button x:Name="ClearListButton"
-                Text="Clear List"
-                Clicked="OnClearListClicked"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand" />
+            <!-- Botones con estilos personalizados -->
+            <Button x:Name="FetchPokemonButton"
+                    Text="Fetch Pokémon Data"
+                    Clicked="OnFetchPokemonClicked"
+                    Style="{StaticResource CustomButtonStyle}" />
 
-        <!-- Botón para obtener un Pokémon aleatorio -->
-        <Button x:Name="FetchRandomPokemonButton"
-                Text="Fetch Random Pokémon"
-                Clicked="OnFetchRandomPokemonClicked"
-                HorizontalOptions="Center"
-                VerticalOptions="CenterAndExpand" />
+            <Button x:Name="ClearListButton"
+                    Text="Clear List"
+                    Clicked="OnClearListClicked"
+                    Style="{StaticResource CustomButtonStyle}" />
 
-        <ScrollView>
-            <VerticalStackLayout x:Name="PokemonCardsContainer" />
-        </ScrollView>
-    </VerticalStackLayout>
+            <Button x:Name="FetchRandomPokemonButton"
+                    Text="Fetch Random Pokémon"
+                    Clicked="OnFetchRandomPokemonClicked"
+                    Style="{StaticResource CustomButtonStyle}" />
+
+            <!-- LISTA DE POKÉMON -->
+            <VerticalStackLayout x:Name="PokemonCardsContainer" Spacing="10"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
