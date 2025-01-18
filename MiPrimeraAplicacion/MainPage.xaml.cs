@@ -19,7 +19,7 @@ namespace MiPrimeraAplicacion
 
         private async void OnFetchPokemonClicked(object sender, EventArgs e)
         {
-            string apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=10";
+            string apiUrl = "https://pokeapi.co/api/v2/pokemon?limit=45";
 
             try
             {
